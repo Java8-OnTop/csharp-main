@@ -14,7 +14,10 @@ namespace main
       int counter = 0;
       int h_stock = 0;
       int m_stock = 0;
-      int h_stock = 0;
+      int c_stock = 0;
+      int h_price = 9229;
+      int m_price = 2626;
+      int c_price = 7173;
       
       Console.WriteLine("Game Started");
       Console.WriteLine("------CrimeSim------");
@@ -25,13 +28,25 @@ namespace main
       string option = Console.ReadLine();
       
       if(option == "1") {
-        Console.WriteLine("(B) buy, (S) sell");
+        Console.WriteLine("(B) buy, (S) sell"); 
         string sellorbuy = Console.ReadLine();
         if(sellorbuy == "s") {
           
           Console.WriteLine("---STOCK---");
           Console.WriteLine("Heroin: " + h_stock);
-          Console.WriteLine("Meth: " + m
+          Console.WriteLine("Meth: " + m_stock);
+          Console.WriteLine("Cocaine: " + c_stock);
+          
+          Console.WriteLine("---SELL---");
+          Console.WriteLine("1. Heroin: $" + h_price);
+          Console.WriteLine("2. Meth: $" + m_price);
+          Console.WriteLine("3. Cocaine: $" + c_price);
+          Console.WriteLine("4. BACK: ")
+          SellChoice = Console.ReadLine();
+          
+          if(SellChoice == "1" && h_stock =< 1) {
+            
+          }
         }
         if(sellorbuy == "B") {
           
@@ -47,12 +62,10 @@ namespace main
             "6225"};
           
           int index = random.Next(questions.Count);
-          
-          h_price = 9229
             
           Console.WriteLine("1 || HEROIN: $"+ h_price);
-          Console.WriteLine("2 || METH: $" + 1222);
-          Console.WriteLine("3 || COCAINE: $" + 8272);
+          Console.WriteLine("2 || METH: $" + m_price);
+          Console.WriteLine("3 || COCAINE: $" + c_price);
           
           string buy = Console.ReadLine();
           
